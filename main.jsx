@@ -4,11 +4,7 @@ import"./styles.css";
 
 const KEY="droplist-listings-v2";
 const ADMIN_KEY="droplist-admin-demo";
-const seed=[
-{id:"DL-1001",name:"Gaming Keyboard",price:3500,description:"Mechanical gaming keyboard in excellent condition.",image:"https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80",discord:"seller_one",status:"approved",createdAt:Date.now()-300000},
-{id:"DL-1002",name:"Wireless Gaming Mouse",price:2499,description:"Lightweight wireless mouse with RGB lighting.",image:"https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80",discord:"mouse_seller",status:"approved",createdAt:Date.now()-200000},
-{id:"DL-1003",name:"PlayStation 5",price:35000,description:"Console with controller. Contact seller for details.",image:"https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=900&q=80",discord:"consolehub",status:"approved",createdAt:Date.now()-100000}
-];
+const seed=[];
 
 function load(){try{const x=JSON.parse(localStorage.getItem(KEY));return Array.isArray(x)?x:seed}catch{return seed}}
 const money=n=>`₹${Number(n).toLocaleString("en-IN")}`;

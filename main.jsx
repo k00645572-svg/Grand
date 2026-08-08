@@ -38,7 +38,7 @@ function App(){
      const item={
        id:"DL-"+Math.floor(10000+Math.random()*89999),
        name:d.get("name"),
-       price:Number(d.get("price")),
+       price:d.get("price"),
        description:d.get("description")||"No description provided.",
        images:images.length?images:(imageUrl?[imageUrl]:[]),
        discord:d.get("discord"),
@@ -80,7 +80,7 @@ function App(){
 
   {page==="list"&&<main className="container form"><div className="eyebrow">SELL SOMETHING</div><h1>List your item.</h1><p>Add multiple product photos. Listings are reviewed by the admin before appearing publicly.</p><form onSubmit={submit}>
    <label>Product name *<input name="name" required/></label>
-   <label>Amount *<input name="price" type="number" min="0" required/></label>
+   <label>Amount *<input name="price" type="text" required/></label>
    <label>Description<textarea name="description" rows="5"/></label>
    <label>Product images<input name="imageFiles" type="file" accept="image/png,image/jpeg,image/webp" multiple/><small className="field-help">You can select multiple images at once.</small></label>
    <label>Or image URL<input name="imageUrl" type="url" placeholder="https://..."/></label>

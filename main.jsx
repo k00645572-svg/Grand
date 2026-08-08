@@ -66,7 +66,7 @@ function AdminLogin({onSuccess}) {
         onSubmit={e => {
           e.preventDefault();
 
-          if (pass === "admin123") {
+          if (pass === "grand@001") {
             localStorage.setItem(ADMIN_KEY, "1");
             onSuccess();
           } else {

@@ -52,6 +52,6 @@ function App(){
  </div>
 }
 
-function AdminLogin({onSuccess}){const[pass,setPass]=useState("");const[err,setErr]=useState("");return <main className="container login"><div className="eyebrow">PRIVATE ADMIN</div><h1>Admin login</h1><p>Demo password is <code>admin123</code>. Change this before production.</p><form onSubmit={e=>{e.preventDefault();if(pass==="admin123"){localStorage.setItem(ADMIN_KEY,"1");onSuccess()}else setErr("Incorrect password.")}}><input type="password" value={pass} onChange={e=>setPass(e.target.value)} placeholder="Admin password"/>{err&&<small className="err">{err}</small>}<button className="primary">Enter Dashboard</button></form></main>}
+function AdminLogin({onSuccess}){const[pass,setPass]=useState("");const[err,setErr]=useState("");return <main className="container login"><div className="eyebrow">PRIVATE ADMIN</div><h1>Admin login</h1><p><p>Sign in to manage marketplace listings.</p><form onSubmit={e=>{e.preventDefault();if(pass==="admin123"){localStorage.setItem(ADMIN_KEY,"1");onSuccess()}else setErr("Incorrect password.")}}><input type="password" value={pass} onChange={e=>setPass(e.target.value)} placeholder="Admin password"/>{err&&<small className="err">{err}</small>}<button className="primary">Enter Dashboard</button></form></main>}
 
 createRoot(document.getElementById("root")).render(<App/>);
